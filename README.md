@@ -1,6 +1,26 @@
 # Getting Started with Create React App
+Sure! Here's a brief description of the application based on the code you sent:
+
+The application is a simple currency converter built in React. Here's a summary:
+
+The app consists of three main components:
+
+1. **Form**: Users can input an amount in Polish złoty (PLN) and select a target currency from a dropdown list.
+
+2. **Calculator**: After filling out the form and clicking the "Calculate" button, the app computes the amount in the selected currency based on current exchange rates (fetched from `currencies.js`).
+
+3. **Result**: The converted amount is displayed below the form, showing both the original amount in PLN and the corresponding amount in the chosen currency.
+
+Additional details:
+
+- The app uses React for managing component state and updates the conversion result reactively.
+- Styling is implemented using CSS, with the main `App` container centered on the page, and the form and result styled for clarity.
+
+The application is designed to provide a straightforward way to convert amounts from PLN to selected currencies using up-to-date exchange rates.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![preview](./src/images/screen.png)
 
 ## Available Scripts
 
@@ -14,10 +34,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -38,33 +54,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
