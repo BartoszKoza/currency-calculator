@@ -2,7 +2,7 @@ body {
   margin: auto;
   font-family: "Lato", sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.112)),
-    url(../images/background-image.jpg);
+    url(../background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
