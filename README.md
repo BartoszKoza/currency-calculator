@@ -1,5 +1,4 @@
 # Getting Started with Create React App
-Sure! Here's a brief description of the application based on the code you sent:
 
 The application is a simple currency converter built in React. Here's a summary:
 
