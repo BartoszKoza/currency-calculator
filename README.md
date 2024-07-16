@@ -19,7 +19,7 @@ The application is designed to provide a straightforward way to convert amounts 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![preview](./src/images/screen.png)
+![preview](./public/images/screen.png)
 
 ## Available Scripts
 
