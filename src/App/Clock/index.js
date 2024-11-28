@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./style.css";
+import { RealTime } from "./styled";
 
 const formatDate = (date) =>
   date.toLocaleString(undefined, {
@@ -23,6 +23,6 @@ export const Clock = () => {
     };
   }, []);
 
-  return <div className="Clock">Dzisiaj jest {formatDate(date)}</div>;
+  return <RealTime>Dzisiaj jest {formatDate(date)}</RealTime>;
 };
 export default Clock;
