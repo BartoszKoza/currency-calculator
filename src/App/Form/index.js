@@ -1,7 +1,17 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
+
+import {
+  Button,
+  Content,
+  CurrencyConventer,
+  FormHeader,
+  FormInfo,
+  Input,
+  Label,
+  Select,
+} from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -13,30 +23,28 @@ export const Form = ({ calculateResult, result }) => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <h1 className="formHeader">Przelicznik walut</h1>
+    <CurrencyConventer onSubmit={onSubmit}>
+      <FormHeader>Przelicznik walut</FormHeader>
 
       <p>
-        <label className="label">
-          <span className="formLabelText">Kwota w PLN</span>
-          <input
+        <Label>
+          <Content>Kwota w PLN</Content>
+          <Input
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
             placeholder="Wpisz kwotę w zł"
-            className="formField"
             type="number"
             step="0.01"
             min="0"
             required
           />
-        </label>
+        </Label>
       </p>
 
       <p>
-        <label className="label">
-          <span className="formLabelText">Wybierz walutę</span>
-          <select
-            className="formField"
+        <Label>
+          <Content>Wybierz walutę</Content>
+          <Select
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -45,19 +53,19 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.name}
               </option>
             ))}
-          </select>
-        </label>
+          </Select>
+        </Label>
       </p>
 
       <p>
-        <button className="button">Oblicz</button>
+        <Button>Oblicz</Button>
       </p>
 
-      <p className="formInfo">
+      <FormInfo>
         Kursy pochodzą ze strony nbp.pl z tabeli nr 136/A/NBP/2024 z dnia
         2024-07-15
-      </p>
+      </FormInfo>
       <Result result={result} />
-    </form>
+    </CurrencyConventer>
   );
 };
