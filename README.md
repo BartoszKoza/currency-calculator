@@ -1,3 +1,6 @@
+# Demo
+https://bartoszkoza.github.io/currency-calculator/
+
 # Getting Started with Create React App
 
 The application is a simple currency converter built in React. Here's a summary:
