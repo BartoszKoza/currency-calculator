@@ -22,8 +22,6 @@ The application is designed to provide a straightforward way to convert amounts 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://bartoszkoza.github.io/currency-calculator/
-
 ![preview](./public/images/screen.png)
 
 ## Available Scripts
