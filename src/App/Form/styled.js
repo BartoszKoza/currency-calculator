@@ -12,12 +12,24 @@ export const Label = styled.label`
   align-items: center;
   border-bottom: 1px solid teal;
   padding-bottom: 15px;
+
+  @media (max-width: 797px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
 `;
 
 export const Content = styled.span`
   font-weight: 700;
   font-size: 18px;
   width: 170px;
+
+  @media (max-width: 797px) {
+    margin-bottom: 5px;
+    text-align: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -29,6 +41,12 @@ export const Input = styled.input`
   border-radius: 10px;
   justify-content: flex-end;
   text-align: center;
+
+  @media (max-width: 797px) {
+    flex-direction: column;
+    align-items: stretch;
+    width: 80%;
+  }
 `;
 
 export const Select = styled.select`
@@ -40,6 +58,11 @@ export const Select = styled.select`
   border-radius: 10px;
   justify-content: flex-end;
   text-align: center;
+  cursor: pointer;
+
+  @media (max-width: 797px) {
+    width: 80%;
+  }
 `;
 
 export const Button = styled.button`
@@ -53,6 +76,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   &:hover {
     background-color: rgb(1, 146, 146);
