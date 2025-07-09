@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { currencies } from "../currencies";
+import { useEffect, useState } from "react";
 import { Result } from "./Result";
 
 import {
@@ -13,8 +12,15 @@ import {
   Select,
 } from "./styled";
 
-export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState(currencies[0].short);
+export const Form = ({ calculateResult, result, currencies }) => {
+  const [currency, setCurrency] = useState("");
+
+  useEffect(() => {
+    if (currencies.length > 0) {
+      setCurrency(currencies[0].short);
+    }
+  }, [currencies]);
+
   const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
@@ -62,8 +68,7 @@ export const Form = ({ calculateResult, result }) => {
       </p>
 
       <FormInfo>
-        Kursy pochodzą ze strony nbp.pl z tabeli nr 136/A/NBP/2024 z dnia
-        2024-07-15
+        
       </FormInfo>
       <Result result={result} />
     </CurrencyConventer>

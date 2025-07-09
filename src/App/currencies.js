@@ -1,28 +1,23 @@
-export const currencies = [
-  {
-    short: "AUD",
-    name: "Dolar australijski",
-    rate: 2.6434,
-  },
-  {
-    short: "CAD",
-    name: "Dolar kanadysjki",
-    rate: 2.8576,
-  },
-  {
-    short: "CZK",
-    name: "Czeska korona",
-    rate: 0.1675,
-  },
-  {
-    short: "GBP",
-    name: "Funt szterling",
-    rate: 5.0603,
-  },
+export async function fetchCurrencies () {
+  const API_URL = "https://api.currencyapi.com/v3/latest?apikey=cur_live_b7RK9fH7PfDFPpZgE889UT27wkJlbKTScVBoj898&base_currency=PLN"
 
-  {
-    short: "USD",
-    name: "Dolar amerykański",
-    rate: 3.896,
-  },
-];
+  try {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+
+    const rates = data.data;
+
+    const currencies = Object.keys(rates).map(code => ({
+      short: code,
+      name: code,
+      rate: rates[code].value
+    }));
+
+    return currencies;
+  }
+  catch (error) {
+    console.error("Błąd pobierania kursu walut:", error);
+    return [];
+  }
+
+}
