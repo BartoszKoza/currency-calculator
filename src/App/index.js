@@ -7,6 +7,12 @@ import { Clock } from "./Clock";
 function App() {
   const [currencies, setCurrencies] = useState([]);
   const [result, setResult] = useState();
+  const [delay, setDelay] = useState (false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDelay(true),1000);
+    return () => clearTimeout(timer);
+  },[]);
 
   useEffect(() => {
     const loadCurrencies = async () => {
@@ -33,8 +39,10 @@ function App() {
   return (
     <div className="App">
       <Clock/>
-      {currencies.length > 0 ? (
-        <Form key={currencies.lenght} result={result} calculateResult={calculateResult} currencies={currencies} />
+      {!delay ? (
+        <p className="delay">Chwileczkę, ładujemy zawartość...</p>
+      ) : currencies.length > 0 ? (
+        <Form key={currencies.length} result={result} calculateResult={calculateResult} currencies={currencies} />
       ):(
         <p>Ładowanie kursów walut</p>
       )}
